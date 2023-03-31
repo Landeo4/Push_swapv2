@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 19:07:26 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/27 17:09:12 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/03/30 21:08:32 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_list_b *pb(t_list_a *la, t_list_b *lb)
 
 	firsta = la;
 	firstb = lb;
-	tmp = firsta->next->data;
+	tmp = firsta->next->num;
 	ft_freeAta(la, 1);
 	ft_addAtb(firstb, tmp, 1);
 	return (firstb);

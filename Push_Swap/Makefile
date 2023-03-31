@@ -15,13 +15,13 @@ SRCS	=	srcs/main.c\
 			srcs/List/ft_getAt.c\
 			srcs/List/ft_len_lista.c\
 			srcs/List/ft_print_list.c\
+			srcs/List/ft_init_struct.c\
 			srcs/Parsing/ft_verif_input.c\
 			srcs/Parsing/ft_verif_existing.c\
 			srcs/Parsing/ft_verif_duplicate.c\
 			srcs/Parsing/ft_verif_int.c\
 			srcs/Parsing/ft_parsing_manager.c\
 			srcs/Parsing/ft_check_var.c\
-			srcs/Parsing/ft_init_struct.c\
 			srcs/Action/sa.c\
 			srcs/Action/sb.c\
 			srcs/Action/pa.c\

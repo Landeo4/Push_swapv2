@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:53:32 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/30 17:56:10 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/03/30 19:13:23 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_free_lista(t_struct *data)
 
 void	ft_free_listb(t_struct *data)
 {
-	t_list_a *tmp;
+	t_list_b *tmp;
 
 	tmp = NULL;
 	while (data->lb)

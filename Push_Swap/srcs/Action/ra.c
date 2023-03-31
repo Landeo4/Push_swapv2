@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 17:12:31 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/29 18:18:03 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/03/30 21:08:53 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_list_a *ra(t_list_a *la)
 
 	data->tmpa = data->la->next;
 	i = 0;
-	recup = tmp->data;
+	recup = tmp->num;
 	while (tmp->next)
 	{
 		tmp = tmp->next;

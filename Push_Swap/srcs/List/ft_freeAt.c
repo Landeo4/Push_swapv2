@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_freeAta.c                                       :+:      :+:    :+:   */
+/*   ft_freeAt.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 18:09:21 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/30 18:22:47 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/03/30 19:14:05 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_freeAta(t_struct *data, int pos)
+t_list_a	*ft_freeAta(t_struct *data, int pos)
 {
 	int i;
 	t_list_a *prec;
@@ -42,7 +42,7 @@ void	ft_freeAta(t_struct *data, int pos)
 	return (tete);
 }
 
-void	ft_freeAtb(t_struct *data, int pos)
+t_list_b	*ft_freeAtb(t_struct *data, int pos)
 {
 	int i;
 	t_list_b *prec;
