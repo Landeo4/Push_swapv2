@@ -10,7 +10,7 @@ SRCS	=	srcs/main.c\
 			srcs/List/ft_create_cell.c\
 			srcs/List/ft_first_list.c\
 			srcs/List/ft_free_both.c\
-			srcs/List/ft_free_lista.c\
+			srcs/List/ft_free_list.c\
 			srcs/List/ft_freeAt.c\
 			srcs/List/ft_getAt.c\
 			srcs/List/ft_len_lista.c\

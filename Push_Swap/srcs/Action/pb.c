@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 19:07:26 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/30 21:08:32 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:03:08 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,11 @@
 ** prend le premier element au sommet de a et le met sur b.
 */
 
-t_list_b *pb(t_list_a *la, t_list_b *lb)
+void pb(t_struct *data)
 {
-	t_list_a *firsta;
-	t_list_b *firstb;
 	int tmp;
 
-	firsta = la;
-	firstb = lb;
-	tmp = firsta->next->num;
-	ft_freeAta(la, 1);
-	ft_addAtb(firstb, tmp, 1);
-	return (firstb);
+	tmp = data->la->next->num;
+	ft_freeAta(data, 1);
+	ft_addAtb(data, tmp, 1);
 }

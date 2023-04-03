@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/30 20:52:27 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/03 23:42:39 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ typedef struct s_struct
 //								Function List_A
 // =======================================================================
 
-t_list_a	*ft_createCell_a(t_struct *data, int nb);
-void 		*ft_first_la(t_struct *data);
-void		ft_addAt_a(t_struct *data, int nb, int pos);
+t_list_a	*ft_createCell_a(int nb);
+t_list_a	*ft_first_la(t_struct *data);
+void		ft_addAta(t_struct *data, int nb, int pos);
 int 		ft_print_lista(t_struct *data);
 void		ft_free_lista(t_struct *data);
 int 		ft_len_lista(t_struct *data);
@@ -78,9 +78,9 @@ t_struct 	*ft_init_struct(t_struct *data);
 //								Function List_B
 // =======================================================================
 
-t_list_b	*ft_createCell_b(t_struct *data, int nb);
-void 		*ft_first_lb(t_struct *data);
-void		ft_addAt_b(t_struct *data, int nb, int pos);
+t_list_b	*ft_createCell_b(int nb);
+t_list_b	*ft_first_lb(t_struct *data);
+void		ft_addAtb(t_struct *data, int nb, int pos);
 int 		ft_print_listb(t_struct *data);
 void		ft_free_listb(t_struct *data);
 int 		ft_len_listb(t_struct *data);
@@ -117,13 +117,13 @@ bool ft_check_var(char **argv);
 t_list_a *sa(t_list_a *la);
 t_list_b *sb(t_list_b *lb);
 void ss(t_list_a *la, t_list_b *lb);
-t_list_b *pa(t_list_a *la, t_list_b *lb);
-t_list_b *pb(t_list_a *la, t_list_b *lb);
+void pa(t_struct *data);
+void pb(t_struct *data);
 t_list_a *ft_change_pos_a(t_list_a *la);
-t_list_a *ra(t_list_a *la);
-t_list_b *rb(t_list_b *lb);
-t_list_a *rra(t_list_a *la);
-t_list_b *rrb(t_list_b *lb);
+void ra(t_struct *data);
+void rb(t_struct *data);
+void	rra(t_struct *data);
+void	rrb(t_struct *data);
 
 
 // =======================================================================

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo_manager.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:17:46 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/29 17:57:36 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:33:04 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/*
 t_list_a *ft_algo_manager(t_list_a *la, t_list_b *lb)
 {
 	t_list_a *tmpa;
@@ -20,7 +20,7 @@ t_list_a *ft_algo_manager(t_list_a *la, t_list_b *lb)
 	(void)lb;
 	ft_algo_3(tmpa);
 	return (tmpa);
-}
+}*/
 
 // 5 6 8 good car de base
 // 5 8 6 good
@@ -29,7 +29,7 @@ t_list_a *ft_algo_manager(t_list_a *la, t_list_b *lb)
 // 8 5 6 
 // 8 6 5 
 
-
+/*
 t_list_a *ft_algo_3(t_list_a *la)
 {
 	t_list_a *tmp;
@@ -46,7 +46,7 @@ t_list_a *ft_algo_3(t_list_a *la)
 		return (tmp);
 	}
 	return (tmp);
-}
+}*/
 
 /*
 t_list_a *ft_algo_3(t_list_a *la)

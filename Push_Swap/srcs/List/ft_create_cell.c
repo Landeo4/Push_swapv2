@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_cell.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:23:00 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/30 19:12:41 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/03 23:42:25 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list_a	*ft_createCell_a(t_struct *data, int nb)
+t_list_a	*ft_createCell_a(int nb)
 {
 	t_list_a *cell;
 	cell = malloc(sizeof(t_list_a));
@@ -20,11 +20,10 @@ t_list_a	*ft_createCell_a(t_struct *data, int nb)
 		return NULL;
 	cell->num = nb;
 	cell->next = NULL;
-	data->la = cell;
 	return (cell);
 }
 
-t_list_b	*ft_createCell_b(t_struct *data, int nb)
+t_list_b	*ft_createCell_b(int nb)
 {
 	t_list_b *cell;
 	cell = malloc(sizeof(t_list_b));
@@ -32,7 +31,5 @@ t_list_b	*ft_createCell_b(t_struct *data, int nb)
 		return NULL;
 	cell->num = nb;
 	cell->next = NULL;
-	data->lb = cell;
 	return (cell);
 }
-

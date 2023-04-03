@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 17:12:31 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/30 21:08:53 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:17:34 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,23 @@
 ** Le premier élément devient le dernier.
 */
 
-t_list_a *ra(t_list_a *la)
+void ra(t_struct *data)
 {
 	int i;
 	int recup;
+	t_list_a *tmp;
 
-	data->tmpa = data->la->next;
 	i = 0;
-	recup = tmp->num;
+	tmp = data->la;
+	recup = data->la->num;
 	while (tmp->next)
 	{
 		tmp = tmp->next;
 		i++;
 	}
 	i++;
-	tmp = la;
-	tmp = ft_freeAta(tmp, 1);
-	tmp = ft_addAt(tmp, recup, i);
-	return (tmp);
+	tmp = data->la;
+	ft_freeAta(data, 1);
+	ft_addAtb(data, recup, i);
+	data->la = tmp;
 }

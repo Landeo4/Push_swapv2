@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 19:47:30 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/30 21:08:38 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:18:23 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,23 @@
 ** Le premier élément devient le dernier.
 */
 
-t_list_b *rb(t_list_b *lb)
+void rb(t_struct *data)
 {
-	t_list_b *tmp;
 	int i;
 	int recup;
+	t_list_b *tmp;
 
-	tmp = lb->next;
 	i = 0;
-	recup = tmp->num;
+	tmp = data->lb;
+	recup = data->lb->num;
 	while (tmp->next)
 	{
 		tmp = tmp->next;
 		i++;
 	}
 	i++;
-	tmp = lb;
-	tmp = ft_freeAtb(tmp, 1);
-	tmp = ft_addAtb(tmp, recup, i);
-	return (tmp);
+	tmp = data->lb;
+	ft_freeAtb(data, 1);
+	ft_addAta(data, recup, i);
+	data->lb = tmp;
 }
