@@ -1,45 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrb.c                                              :+:      :+:    :+:   */
+/*   ft_print_list.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 13:54:38 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/03 16:31:58 by landeo           ###   ########.fr       */
+/*   Created: 2023/03/30 17:47:05 by tpotilli          #+#    #+#             */
+/*   Updated: 2023/04/04 12:09:39 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
-**	This function takes as parameter: 
-**
-**	t_list_a the name of the struct
-**
-**	la : name of the list b
-** =====================================================
-** =====================================================
-**
-** every element of a will go down
-** the first become the last
-*/
+int ft_print_lista(t_struct *data)
+{
+	t_list_a *tmp;
 
-void	rrb(t_struct *data)
+	tmp = data->la->next;
+	if (!tmp)
+		return (-1);
+	while (tmp)
+	{
+		printf("%d\n", tmp->num);
+		tmp = tmp->next;
+	}
+	return (1);
+}
+
+int ft_print_listb(t_struct *data)
 {
 	t_list_b *tmp;
-	int i;
-	int recup;
 
 	tmp = data->lb->next;
-	i = 1;
-	while (tmp->next)
+	if (!tmp)
+		return (-1);
+	while (tmp)
 	{
+		printf("%d\n", tmp->num);
 		tmp = tmp->next;
-		i++;
 	}
-	recup = tmp->num;
-	tmp = data->lb;
-	ft_freeAtb(data, i);
-	ft_addAta(data, recup, 1);
+	return (1);
 }

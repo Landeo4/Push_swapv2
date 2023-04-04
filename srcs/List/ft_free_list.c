@@ -6,7 +6,7 @@
 /*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:53:32 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/03 23:29:45 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/04 12:53:07 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_free_listb(t_struct *data)
 {
 	t_list_b *tmp;
 
-	tmp = NULL;
+	tmp = data->lb;
 	while (data->lb)
 	{
 		tmp = data->lb->next;

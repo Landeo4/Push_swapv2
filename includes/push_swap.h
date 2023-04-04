@@ -6,7 +6,7 @@
 /*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/03 23:42:39 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/04 15:32:53 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,13 +125,12 @@ void rb(t_struct *data);
 void	rra(t_struct *data);
 void	rrb(t_struct *data);
 
-
 // =======================================================================
 //								algo
 // =======================================================================
 
-t_list_a *ft_algo_manager(t_list_a *la, t_list_b *lb);
-t_list_a *ft_algo_3(t_list_a *la);
+void	ft_algo_manager(t_struct *data, int len);
+void	ft_algo_3(t_struct *data);
 
 
 

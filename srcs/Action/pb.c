@@ -1,49 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rb.c                                               :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/27 19:47:30 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/03 16:18:23 by landeo           ###   ########.fr       */
+/*   Created: 2023/03/25 19:07:26 by tpotilli          #+#    #+#             */
+/*   Updated: 2023/04/04 11:35:57 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 /*
 **	This function takes as parameter: 
 **
-**	t_list_b the name of the struct
+**	t_list_a the name of the struct
 **
-**	la : name of the list b
+**	la : name of the list a
 ** =====================================================
 ** =====================================================
 **
-** take the first element on the top of b and put it in top a
-** prend le premier element en haut de b et le met en haut de a
-**
-** Décale d’une position vers le haut tous les élements de la pile a.
-** Le premier élément devient le dernier.
+** take the first element on the top of a and put it in top b
+** prend le premier element au sommet de a et le met sur b.
 */
 
-void rb(t_struct *data)
+void pb(t_struct *data)
 {
-	int i;
-	int recup;
-	t_list_b *tmp;
+	int tmp;
 
-	i = 0;
-	tmp = data->lb;
-	recup = data->lb->num;
-	while (tmp->next)
-	{
-		tmp = tmp->next;
-		i++;
-	}
-	i++;
-	tmp = data->lb;
-	ft_freeAtb(data, 1);
-	ft_addAta(data, recup, i);
-	data->lb = tmp;
+	tmp = data->la->next->num;
+	ft_freeAta(data, 1);
+	ft_addAtb(data, tmp, 1);
 }

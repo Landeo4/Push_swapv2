@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra.c                                              :+:      :+:    :+:   */
+/*   rrb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 13:03:36 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/03 16:31:28 by landeo           ###   ########.fr       */
+/*   Created: 2023/03/29 13:54:38 by tpotilli          #+#    #+#             */
+/*   Updated: 2023/04/04 12:23:04 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **
 **	t_list_a the name of the struct
 **
-**	la : name of the list a
+**	la : name of the list b
 ** =====================================================
 ** =====================================================
 **
@@ -25,13 +25,13 @@
 ** the first become the last
 */
 
-void	rra(t_struct *data)
+void	rrb(t_struct *data)
 {
-	t_list_a *tmp;
+	t_list_b *tmp;
 	int i;
 	int recup;
 
-	tmp = data->la->next;
+	tmp = data->lb->next;
 	i = 1;
 	while (tmp->next)
 	{
@@ -39,7 +39,7 @@ void	rra(t_struct *data)
 		i++;
 	}
 	recup = tmp->num;
-	tmp = data->la;
-	ft_freeAta(data, i);
+	tmp = data->lb;
+	ft_freeAtb(data, i);
 	ft_addAtb(data, recup, 1);
 }

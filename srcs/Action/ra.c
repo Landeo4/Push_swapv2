@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pb.c                                               :+:      :+:    :+:   */
+/*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 19:07:26 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/03 16:03:08 by landeo           ###   ########.fr       */
+/*   Created: 2023/03/27 17:12:31 by tpotilli          #+#    #+#             */
+/*   Updated: 2023/04/04 15:37:59 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 /*
 **	This function takes as parameter: 
 **
@@ -21,15 +20,28 @@
 ** =====================================================
 ** =====================================================
 **
-** take the first element on the top of a and put it in top b
-** prend le premier element au sommet de a et le met sur b.
+** take the first element on the top of b and put it in top a
+** prend le premier element en haut de b et le met en haut de a
+**
+** Décale d’une position vers le haut tous les élements de la pile a.
+** Le premier élément devient le dernier.
 */
 
-void pb(t_struct *data)
+void ra(t_struct *data)
 {
-	int tmp;
+	int i;
+	int recup;
+	t_list_a *tmp;
 
-	tmp = data->la->next->num;
+	i = 0;
+	tmp = data->la;
+	recup = data->la->next->num;
+	while (tmp->next)
+	{
+		i++;
+		tmp = tmp->next;
+	}
+	tmp = data->la;
 	ft_freeAta(data, 1);
-	ft_addAtb(data, tmp, 1);
+	ft_addAta(data, recup, i);
 }

@@ -6,7 +6,7 @@
 /*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:14:19 by tpotilli@st       #+#    #+#             */
-/*   Updated: 2023/04/03 23:46:01 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/04 17:30:19 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,15 +219,17 @@ int main(int argc, char **argv)
 	int i = 1;
 	while (argv[i])
 	{
-		//ft_addAta(&data, ft_atoi(argv[i]), 1);
+		ft_addAta(&data, ft_atoi(argv[i]), 1);
 		ft_addAtb(&data, ft_atoi(argv[i]), 1);
 		i++;
 	}
-	//ft_print_lista(&data);
-	ft_print_listb(&data);
-	printf("\n");
-	pa(&data);
 	ft_print_lista(&data);
-	ft_print_listb(&data);
+	printf("\n");
+	//ft_algo_manager(&data, argc - 1);
+	pa(&data);
+	printf("\n");
+	ft_print_lista(&data);
 	ft_free_lista(&data);
+	ft_free_listb(&data);
+
 }
