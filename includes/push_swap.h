@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/04 15:32:53 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/05 18:01:58 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,12 +116,12 @@ bool ft_check_var(char **argv);
 
 t_list_a *sa(t_list_a *la);
 t_list_b *sb(t_list_b *lb);
-void ss(t_list_a *la, t_list_b *lb);
-void pa(t_struct *data);
-void pb(t_struct *data);
+void 	ss(t_list_a *la, t_list_b *lb);
+void 	pa(t_struct *data);
+void 	pb(t_struct *data);
 t_list_a *ft_change_pos_a(t_list_a *la);
-void ra(t_struct *data);
-void rb(t_struct *data);
+void 	ra(t_struct *data);
+void 	rb(t_struct *data);
 void	rra(t_struct *data);
 void	rrb(t_struct *data);
 
@@ -131,6 +131,8 @@ void	rrb(t_struct *data);
 
 void	ft_algo_manager(t_struct *data, int len);
 void	ft_algo_3(t_struct *data);
+void	ft_algo_4(t_struct *data);
+void ft_algo_4_1(t_struct *data);
 
 
 

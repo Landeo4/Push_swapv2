@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:34:29 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/03 16:01:59 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/05 13:08:22 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void pa(t_struct *data)
 	int tmp;
 
 	tmp = data->lb->next->num;
-	ft_freeAtb(data, 1);
-	ft_addAta(data, tmp, 1);
+	ft_freeAta(data, 1);
+	ft_addAtb(data, tmp, 1);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:14:19 by tpotilli@st       #+#    #+#             */
-/*   Updated: 2023/04/04 17:30:19 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/05 18:00:02 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -212,7 +212,6 @@ int main(int argc, char **argv)
 {
 	(void)argc;
 	//ft_parsing_manager(argc, argv);
-
 	t_struct data;
 
 	ft_init_struct(&data);
@@ -220,16 +219,14 @@ int main(int argc, char **argv)
 	while (argv[i])
 	{
 		ft_addAta(&data, ft_atoi(argv[i]), 1);
-		ft_addAtb(&data, ft_atoi(argv[i]), 1);
 		i++;
 	}
 	ft_print_lista(&data);
 	printf("\n");
-	//ft_algo_manager(&data, argc - 1);
-	pa(&data);
+	ft_algo_manager(&data, argc - 1);
+	//rra(&data);
 	printf("\n");
 	ft_print_lista(&data);
 	ft_free_lista(&data);
 	ft_free_listb(&data);
-
 }
