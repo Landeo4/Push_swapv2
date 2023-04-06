@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 17:23:21 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/05 18:11:13 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/06 20:01:20 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ void ft_algo_4(t_struct *data)
 
 /*
 1 2 3 4
-1 2 4 3
-1 3 2 4
-1 3 4 2
-1 4 2 3
-1 4 3 2 
+1 2 4 3 good
+1 3 2 4 good
+1 3 4 2 good
+1 4 2 3 good
+1 4 3 2 good
 */
 
 void ft_algo_4_1(t_struct *data)
@@ -59,12 +59,37 @@ void ft_algo_4_1(t_struct *data)
 	t_list_a *num;
 // on sais deja qu'on est chez les 1
 	num = data->la->next;
-	printf("%d", num->num);
-	if (num->next < num->next->next && num->next < num->next->next->next && num->next->next > num->next->next->next) // 1 2 4 3
+	// 1 2 4 3
+	if (num->next->num < num->next->next->num && num->next->next->num > num->next->next->next->num && num->next->num < num->next->next->next->num) // 1 2 4 3
 	{
 		pb(data);
 		rra(data);
 		sa(data->la);
+		pa(data);
+	}
+	else if (num->next->num > num->next->next->num && num->next->next->num < num->next->next->next->num && num->next->num < num->next->next->next->num) // 1 3 2 4 ou 4 2 3 1
+	{
+		pb(data);
+		sa(data->la);
+		pa(data);
+	}
+	else if (num->next->num < num->next->next->num && num->next->next->num > num->next->next->next->num && num->next->num > num->next->next->next->num) // 1 3 4 2 ou  2 4 3 1
+	{
+		pb(data);
+		rra(data);
+		pa(data);
+	}
+	else if (num->next->num > num->next->next->num && num->next->next->num < num->next->next->next->num && num->next->num > num->next->next->next->num) // 1 4 2 3 ou  3 2 4 1
+	{
+		pb(data);
+		ra(data);
+		pa(data);
+	}
+	else if (num->next->num > num->next->next->num && num->next->next->num > num->next->next->next->num && num->next->num > num->next->next->next->num) // 1 4 3 2  ou  2 3 4 1
+	{
+		pb(data);
+		sa(data->la);
+		rra(data);
 		pa(data);
 	}
 }

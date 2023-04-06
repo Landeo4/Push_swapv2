@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/05 18:01:58 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/06 20:07:30 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,7 @@ void	rrb(t_struct *data);
 
 void	ft_algo_manager(t_struct *data, int len);
 void	ft_algo_3(t_struct *data);
+void	ft_algo_3sup(t_struct *data, int num1, int num2, int num3);
 void	ft_algo_4(t_struct *data);
 void ft_algo_4_1(t_struct *data);
 
