@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:29:56 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/25 18:53:50 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/07 15:56:11 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,11 @@
 **
 ** It will do sa and sb at the same time
 */
-/*
-void ss(t_list_a *la, t_list_b *lb)
+
+void ss(t_struct *data)
 {
 	t_list_a *a;
 	t_list_b *b;
 	sa(a);
 	sb(b);
 }
-/
-*

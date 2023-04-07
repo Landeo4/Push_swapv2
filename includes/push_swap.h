@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/06 20:07:30 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/07 16:59:45 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ bool ft_check_var(char **argv);
 
 t_list_a *sa(t_list_a *la);
 t_list_b *sb(t_list_b *lb);
-void 	ss(t_list_a *la, t_list_b *lb);
+void ss(t_struct *data);
 void 	pa(t_struct *data);
 void 	pb(t_struct *data);
 t_list_a *ft_change_pos_a(t_list_a *la);
@@ -134,6 +134,8 @@ void	ft_algo_3(t_struct *data);
 void	ft_algo_3sup(t_struct *data, int num1, int num2, int num3);
 void	ft_algo_4(t_struct *data);
 void ft_algo_4_1(t_struct *data);
+void ft_algo_4_2(t_struct *data);
+void ft_algo_4_3(t_struct *data);
 
 
 
