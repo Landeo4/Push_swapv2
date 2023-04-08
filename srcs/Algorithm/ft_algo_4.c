@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 17:23:21 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/07 16:59:39 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/08 15:59:00 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,16 @@ void ft_algo_4(t_struct *data)
 		token = 2;
 	else if (n1->num > n1->next->num && n1->num > n1->next->next->num && n1->num < n1->next->next->next->num)
 		token = 3;
-	else if (n1->num > n1->next->num && n1->num > n1->next->next->num && n1->num > n1->next->next->next->num)
+	else
 		token = 4;
+	printf("%d", token);
 	if (token == 1)
 		ft_algo_4_1(data);
 	else if (token == 2)
 		ft_algo_4_2(data);
-	/*else if (token == 3)
+	else if (token == 3)
 		ft_algo_4_3(data);
-	else if (token == 4)
+	/*else if (token == 4)
 		ft_algo_4_4(data);*/
 }
 
@@ -71,9 +72,24 @@ void ft_algo_4_2(t_struct *data)
 
 void ft_algo_4_3(t_struct *data)
 {
-	pb(data);
-	ft_algo(data);
-	pa(data);
+	int nb1;
+	int nb2;
+	int nb3;
+	int nb4;
+
+	nb1 = data->la->next->num;
+	nb2 = data->la->next->next->num;
+	nb3 = data->la->next->next->next->num;
+	nb4 = data->la->next->next->next->next->num;
+	if (nb1 < nb2 && nb1 > nb3 && nb1 > nb4 && nb2 > nb3 && nb2 > nb4)
+	{
+		ra(data);
+		ra(data);
+		return ;
+	}
+	/*pb(data);
+	ft_algo_3(data);
+	pa(data);*/
 }
 
 /*
