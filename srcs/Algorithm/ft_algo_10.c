@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo_10.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:16:43 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/18 14:11:11 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:08:34 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,44 @@ void ft_algo_10(t_struct *data)
 	t_list_a *la;
 	int nb;
 	int i;
+	int pos;
 
+	pos = ft_found_pos_little(data);
 	la = data->la->next;
 	nb = ft_found_little(data);
-	while (la)
+	while (i < pos)
 	{
+		i++;
 		if (la->num == nb)
 			break;
 		la = la->next;
-		i++;
 	}
 	la = data->la->next;
 	printf("i = %d et len = %d", i, ft_len_lista(data));
 	//ft_10_action(i, nb, la, data);
 }
 
-void ft_10_action(int i, int num, t_list_a *la, t_struct *data)
+int ft_found_pos_little(t_struct *data)
+{
+	int i;
+	t_list_a *tab;
+
+	i = 0;
+	tab = data->la->next;
+	while (tab)
+	{
+		i++;
+		tab = tab->next;
+	}
+	return (i);
+}
+
+void ft_10_action(int pos, int num, t_list_a *la, t_struct *data)
 {
 	int len;
 
 	len = ft_len_lista(data) / 2;
-	if (i > len)
+	if (pos > len)
 	{
 		while (la->num != num)
 		{
@@ -45,7 +62,7 @@ void ft_10_action(int i, int num, t_list_a *la, t_struct *data)
 		}
 		pb(data);
 	}
-	else if (i < len / 2)
+	else if (pos < len / 2)
 	{
 		while (la->num != num)
 		{
