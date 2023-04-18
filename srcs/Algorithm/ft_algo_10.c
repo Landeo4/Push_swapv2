@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:16:43 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/18 13:06:53 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:11:11 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void ft_algo_10(t_struct *data)
 {
-	//t_struct *tab;
 	t_list_a *la;
 	int nb;
 	int i;
 
-	//tab = data;
 	la = data->la->next;
 	nb = ft_found_little(data);
 	while (la)
@@ -29,21 +27,32 @@ void ft_algo_10(t_struct *data)
 		la = la->next;
 		i++;
 	}
-	ft_10_action(i, nb, la, data);
+	la = data->la->next;
+	printf("i = %d et len = %d", i, ft_len_lista(data));
+	//ft_10_action(i, nb, la, data);
 }
 
-void ft_10_action(int i, int nb, t_list_a *la, t_struct *data)
+void ft_10_action(int i, int num, t_list_a *la, t_struct *data)
 {
-	t_list_a *ka;
+	int len;
 
-	ka = data->la->next;
-	while (i > ft_len_lista(data) / 2)
+	len = ft_len_lista(data) / 2;
+	if (i > len)
 	{
-		if (ka->num == la->num)
+		while (la->num != num)
 		{
-			pb(data);
-			break;
+			rra(data);
 		}
+		pb(data);
+	}
+	else if (i < len / 2)
+	{
+		while (la->num != num)
+		{
+			ra(data);
+			la = la->next;
+		}
+		pb(data);
 	}
 }
 //faire une fonction qui trouve le plus petit chiffre

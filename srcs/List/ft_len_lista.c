@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:58:16 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/30 18:00:06 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:54:03 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 int ft_len_lista(t_struct *data)
 {
 	int len;
+	t_list_a *lan;
 
-	len = 1;
-	while (data->la)
+	len = 0;
+	lan = data->la->next;
+	while (lan)
 	{
 		len++;
-		data->la = data->la->next;
+		lan = lan->next;
 	}
 	return (len);
 }
@@ -28,12 +30,14 @@ int ft_len_lista(t_struct *data)
 int ft_len_listb(t_struct *data)
 {
 	int len;
+	t_list_b *lan;
 
-	len = 1;
-	while (data->lb)
+	len = 0;
+	lan = data->lb->next;
+	while (lan)
 	{
 		len++;
-		data->lb = data->lb->next;
+		lan = lan->next;
 	}
 	return (len);
 }
