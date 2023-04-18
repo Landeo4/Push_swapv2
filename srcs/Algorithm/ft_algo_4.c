@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 17:23:21 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/18 10:43:08 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/18 11:53:57 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ void	ft_algo_4_2(t_struct *data)
 	pb(data);
 	ft_algo_3(data);
 	pa(data);
-	sa(data->la);
+	if (data->la->next->num > data->la->next->next->num)
+		sa(data->la);
 }
 
 void	ft_algo_4_3(t_struct *data)

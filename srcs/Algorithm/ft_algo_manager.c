@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:17:46 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/18 11:39:33 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/18 12:38:01 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ void	ft_algo_manager(t_struct *data, int len)
 		ft_algo_3(data);
 	if (len == 4)
 		ft_algo_4_manager(data);
-	if (len == 5)
-		ft_algo_5_manager(data);
+	if (len > 4 && len < 10)
+		ft_algo_10_manager(data);
 }
 
 void ft_algo_4_manager(t_struct *data)
+
 {
 	int token;
 	int n1;
@@ -47,6 +48,12 @@ void ft_algo_4_manager(t_struct *data)
 	ft_algo_4(data, token);
 }
 
+void ft_algo_10_manager(t_struct *data)
+{
+	ft_algo_10(data);
+}
+
+/*
 void ft_algo_5_manager(t_struct *data)
 {
 	int token;
@@ -97,3 +104,4 @@ void ft_algo_5(t_struct *data, int token)
 	else if (token == 5)
 		ft_algo_5_5(data);
 }
+*/

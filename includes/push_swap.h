@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/18 11:40:11 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/18 12:38:22 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,6 +147,9 @@ void 	ft_algo_5_2(t_struct *data);
 void 	ft_algo_5_3(t_struct *data);
 void 	ft_algo_5_4(t_struct *data);
 void 	ft_algo_5_5(t_struct *data);
+void 	ft_algo_10(t_struct *data);
+void ft_algo_10_manager(t_struct *data);
+int ft_found_little(t_struct *data);
 
 void push_swap(t_list_a *);
 void ft_error();

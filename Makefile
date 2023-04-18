@@ -34,6 +34,7 @@ SRCS	=	srcs/main.c\
 			srcs/Algorithm/ft_algo_4.c\
 			srcs/Algorithm/ft_algo_3.c\
 			srcs/Algorithm/ft_algo_5.c\
+			srcs/Algorithm/ft_algo_10.c\
 
 
 OBJS= $(SRCS:.c=.o)
