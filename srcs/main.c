@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:14:19 by tpotilli@st       #+#    #+#             */
-/*   Updated: 2023/04/18 07:30:39 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/19 14:55:30 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,10 +211,10 @@ int main(int argc, char **argv)
 int main(int argc, char **argv)
 {
 	(void)argc;
-	//ft_parsing_manager(argc, argv);
 	t_struct data;
 
 	ft_init_struct(&data);
+	ft_parsing_manager(argc, argv);
 	int i = 1;
 	while (argv[i])
 	{

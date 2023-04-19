@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo_10.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:16:43 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/18 17:08:34 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:09:21 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void ft_algo_10(t_struct *data)
 	pos = ft_found_pos_little(data);
 	la = data->la->next;
 	nb = ft_found_little(data);
+	i = 0;
 	while (i < pos)
 	{
 		i++;
@@ -30,7 +31,8 @@ void ft_algo_10(t_struct *data)
 		la = la->next;
 	}
 	la = data->la->next;
-	printf("i = %d et len = %d", i, ft_len_lista(data));
+	//printf("i = %d et len = %d", i, ft_len_lista(data));
+	printf("la = %d", la->num);
 	//ft_10_action(i, nb, la, data);
 }
 
@@ -53,12 +55,15 @@ void ft_10_action(int pos, int num, t_list_a *la, t_struct *data)
 {
 	int len;
 
-	len = ft_len_lista(data) / 2;
-	if (pos > len)
+	len = ft_len_lista(data);
+	//printf("la = %d", la->num);
+	if (pos > (len / 2))
 	{
 		while (la->num != num)
 		{
 			rra(data);
+			data->la = la;
+			//printf("yo");
 		}
 		pb(data);
 	}

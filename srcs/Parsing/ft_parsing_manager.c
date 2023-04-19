@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:31:04 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/03/29 15:45:48 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/19 14:51:53 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int ft_parsing_manager(int argc, char **argv)
 		buf = argv[i];	
 		if ((ft_verif_existing(argc)) == 0)
 		{
-			write(2, "put the ciment on the poto la bas\n", 35);
+			write(2, "put at leat 3 argument\n", 24);
 			return (2);
 		}
 		if ((ft_verif_input(argv)) == 0)
