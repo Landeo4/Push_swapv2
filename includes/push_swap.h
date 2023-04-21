@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/18 16:58:01 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/21 16:38:14 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,10 +148,11 @@ void 	ft_algo_5_3(t_struct *data);
 void 	ft_algo_5_4(t_struct *data);
 void 	ft_algo_5_5(t_struct *data);
 void 	ft_algo_10(t_struct *data);
-void ft_algo_10_manager(t_struct *data);
-int ft_found_little(t_struct *data);
-void ft_10_action(int i, int num, t_list_a *la, t_struct *data);
-int ft_found_pos_little(t_struct *data);
+void 	ft_algo_10_manager(t_struct *data);
+int 	ft_found_little(t_struct *data);
+void 	ft_10_action(int i, int num, t_list_a *la, t_struct *data);
+int 	ft_found_pos_little(t_struct *data);
+void	ft_tri_10(int pos, int num, t_list_a *tmp, t_struct *data);
 
 void push_swap(t_list_a *);
 void ft_error();
