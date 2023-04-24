@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 15:57:40 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/24 09:39:32 by tpotilli         ###   ########.fr       */
+/*   Created: 2023/01/17 09:48:49 by tpotilli@st       #+#    #+#             */
+/*   Updated: 2023/04/24 09:05:57 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rr(t_struct *data)
+int	ft_putstr(char *s)
 {
-	ra(data);
-	rb(data);
-	ft_printf("\nrr");
+	int	i;
+	int	cpt;
+
+	cpt = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	i = 0;
+	while (s[i])
+	{
+		write (1, &s[i], 1);
+		cpt++;
+		i++;
+	}
+	return (cpt);
 }

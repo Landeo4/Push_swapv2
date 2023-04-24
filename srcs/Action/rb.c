@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 19:47:30 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/04 12:48:55 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/24 09:40:02 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@
 ** Le premier élément devient le dernier.
 */
 
-void rb(t_struct *data)
+void	rb(t_struct *data)
 {
-	int i;
-	int recup;
-	t_list_b *tmp;
+	int			i;
+	int			recup;
+	t_list_b	*tmp;
 
 	i = 0;
 	tmp = data->lb;
@@ -46,4 +46,5 @@ void rb(t_struct *data)
 	ft_freeAtb(data, 1);
 	ft_addAtb(data, recup, i);
 	data->lb = tmp;
+	ft_printf("\nrb");
 }

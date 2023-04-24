@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:31:04 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/19 14:51:53 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/24 10:14:44 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int ft_parsing_manager(int argc, char **argv)
 	//write(2, RED, ft_strlen(RED));
 	while (argv[i])
 	{
-		buf = argv[i];	
+		buf = argv[i];
+		if (ft_guillemet(argv) == 0)
+			return (ft_printf("les Guillement sont pas bon"));
 		if ((ft_verif_existing(argc)) == 0)
 		{
 			write(2, "put at leat 3 argument\n", 24);
@@ -29,17 +31,17 @@ int ft_parsing_manager(int argc, char **argv)
 		}
 		if ((ft_verif_input(argv)) == 0)
 		{
-			write(2, "get on the beteuse\n", 20);
+			write(2, "wrong input, put numbers please\n", 20);
 			return (0);
 		}
 		if ((ft_verif_int(buf)) == 0)
 		{
-			write(2, "hurry up hein\n", 15);
+			write(2, "wrong number please put an int\n", 15);
 			return (0);
 		}
 		if ((ft_verif_duplicate(argv)) == 0)
 		{
-			write(2, "ca fait deja 10 min j'ai allumer la clope\n", 43);
+			write(2, "2 same numbers, don't put duplicate numbers\n", 43);
 			return (0);
 		}
 		i++;

@@ -6,11 +6,11 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:29:56 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/07 15:56:11 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/24 09:41:15 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap"
+#include "push_swap.h"
 
 /*
 **	This function takes as parameter: 
@@ -26,10 +26,12 @@
 ** It will do sa and sb at the same time
 */
 
-void ss(t_struct *data)
+void	ss(t_struct *data)
 {
-	t_list_a *a;
-	t_list_b *b;
+	t_list_a	*a;
+	t_list_b	*b;
+
 	sa(a);
 	sb(b);
+	ft_printf("\nss");
 }

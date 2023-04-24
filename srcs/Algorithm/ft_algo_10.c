@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:16:43 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/21 16:43:30 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/24 08:55:23 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,18 @@ void	ft_algo_10(t_struct *data)
 
 void	ft_tri_10(int i, int nb, t_list_a *la, t_struct *data)
 {
-	while (la->next && la->next->next)
+	while (la)
 	{
+		if (ft_len_lista(data) == 3)
+		{
+			ft_algo_3(data);
+			break ;
+		}
 		ft_10_action(i, nb, la, data);
+		nb = ft_found_little(data);
 	}
+	while (ft_len_listb(data))
+		pa(data);
 }
 
 void	ft_10_action(int pos, int num, t_list_a *tmp, t_struct *data)
@@ -86,8 +94,6 @@ int	ft_found_pos_little(t_struct *data)
 	return (i);
 }
 
-//faire une fonction qui trouve le plus petit chiffre
-//puis renvoie son emplacement
 int	ft_found_little(t_struct *data)
 {
 	int			i;
@@ -104,6 +110,5 @@ int	ft_found_little(t_struct *data)
 		i++;
 		tab = tab->next;
 	}
-	printf("le plus petit est %d\n", nb);
 	return (nb);
 }

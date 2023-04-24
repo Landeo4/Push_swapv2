@@ -5,6 +5,13 @@ SRCS	=	srcs/main.c\
 			srcs/Libft/ft_strlen.c\
 			srcs/Libft/ft_atoi.c\
 			srcs/Libft/ft_atol.c\
+			srcs/Libft/ft_putchar.c\
+			srcs/Libft/ft_putnbr_base.c\
+			srcs/Libft/ft_putnbr.c\
+			srcs/Libft/ft_putstr.c\
+			srcs/Libft/ft_printf.c\
+			srcs/Libft/ft_putnbr_void.c\
+			srcs/Libft/ft_itoa.c\
 			srcs/Libft/ft_putstr_fd.c\
 			srcs/List/ft_addAt.c\
 			srcs/List/ft_create_cell.c\
@@ -22,6 +29,7 @@ SRCS	=	srcs/main.c\
 			srcs/Parsing/ft_verif_int.c\
 			srcs/Parsing/ft_parsing_manager.c\
 			srcs/Parsing/ft_check_var.c\
+			srcs/Parsing/ft_guillemet.c\
 			srcs/Action/sa.c\
 			srcs/Action/sb.c\
 			srcs/Action/pa.c\

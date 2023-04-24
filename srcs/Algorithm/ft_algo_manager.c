@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:17:46 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/18 12:38:01 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/24 09:31:12 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,17 @@ void	ft_algo_manager(t_struct *data, int len)
 		ft_algo_3(data);
 	if (len == 4)
 		ft_algo_4_manager(data);
-	if (len > 4 && len < 10)
+	if (len > 4 && len <= 10)
 		ft_algo_10_manager(data);
 }
 
-void ft_algo_4_manager(t_struct *data)
-
+void	ft_algo_4_manager(t_struct *data)
 {
-	int token;
-	int n1;
-	int n2;
-	int n3;
-	int n4;
+	int	token;
+	int	n1;
+	int	n2;
+	int	n3;
+	int	n4;
 
 	n1 = data->la->next->num;
 	n2 = data->la->next->next->num;
@@ -37,9 +36,9 @@ void ft_algo_4_manager(t_struct *data)
 	n4 = data->la->next->next->next->next->num;
 	if (n1 < n2 && n1 < n3 && n1 < n4)
 		token = 1;
-	else if ((n1 > n2 && n1 < n3 && n1 < n4) 
-			|| (n1 < n2 && n1 < n3 && n1 > n4)
-			|| (n1 < n2 && n1 > n3 && n1 < n4))
+	else if ((n1 > n2 && n1 < n3 && n1 < n4)
+		|| (n1 < n2 && n1 < n3 && n1 > n4)
+		|| (n1 < n2 && n1 > n3 && n1 < n4))
 		token = 2;
 	else if (n1 < n2 || n1 < n3 || n1 < n4)
 		token = 3;
@@ -48,7 +47,7 @@ void ft_algo_4_manager(t_struct *data)
 	ft_algo_4(data, token);
 }
 
-void ft_algo_10_manager(t_struct *data)
+void	ft_algo_10_manager(t_struct *data)
 {
 	ft_algo_10(data);
 }

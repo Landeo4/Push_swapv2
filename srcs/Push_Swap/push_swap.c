@@ -6,13 +6,13 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 19:10:16 by tpotilli@st       #+#    #+#             */
-/*   Updated: 2023/04/18 09:59:53 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/24 09:38:24 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void push_swap(t_list_a *la)
+void push_swap(t_struct *data)
 {
 	
 }
