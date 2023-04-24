@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 09:45:40 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/24 11:15:22 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/24 12:16:36 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	**ft_guillemet(char **argv)
 	char **str;
 
 	str = NULL;
-	i = -1;
-	j = -1;
+	i = 0;
+	j = 0;
 	while (argv[i])
 	{
 		if (argv[i][j] == 22)
@@ -38,6 +38,25 @@ char	**ft_guillemet(char **argv)
 		i++;
 	}
 	return (str);
+}
+
+int	ft_guillemet_check(char **argv, int i)
+{
+	int	j;
+	int	tmp;
+
+	j = 0;
+	tmp = 0;
+	while (argv[i])
+	{
+		while (argv[i][j] == 22)
+		{
+			tmp++;
+			j++;
+		}
+		i++;
+	}
+	return (1);
 }
 
 /*
