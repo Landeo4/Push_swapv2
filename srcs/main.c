@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:14:19 by tpotilli@st       #+#    #+#             */
-/*   Updated: 2023/04/25 14:11:52 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/25 16:41:06 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -210,24 +210,22 @@ int main(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
-	t_struct data;
+	//t_struct data;
+	//int	i;
 
-	ft_parsing_manager(argc, argv);
+	//i = 1;
+	if (ft_parsing_manager(argc, argv) == 0)
+		return (0);
 	ft_printf("c'est bon pour les guillemet");
-	ft_init_struct(&data);
-	/*
-	int i = 1;
+	/*ft_init_struct(&data);
 	while (argv[i])
 	{
 		ft_addAta(&data, ft_atoi(argv[i]), 1);
 		i++;
 	}
 	//ft_print_lista(&data);
-	printf("\n");
-	ft_algo_manager(&data, argc - 1);
-	printf("\n");
-	//ft_print_lista(&data);
-	*/
+	//ft_algo_manager(&data, argc - 1);
+	ft_print_lista(&data);
 	ft_free_lista(&data);
-	ft_free_listb(&data);
+	ft_free_listb(&data);*/
 }

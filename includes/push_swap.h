@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/25 14:10:19 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/25 17:08:39 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,10 +131,12 @@ bool		ft_check_var(char **argv);
 char		*ft_guillemet(char **argv, int i);
 char		**ft_str_guillemet(char **argv);
 char		**ft_write_str(int i, char **save, int tmp, char **argv);
-char		**ft_get_gui(char **argv);
+char		**ft_cpy_gui(char **argv, int i);
 int			ft_guillemet_size(char **argv, int i);
 int			ft_manager_helper();
 char		**ft_parsing_manager_trans_arg(char **argv);
+int			ft_gui_check(char **argv);
+int			ft_parsing_manager_sup(char **argv);
 
 // =======================================================================
 //								actions
