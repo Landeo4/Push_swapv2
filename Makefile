@@ -10,6 +10,7 @@ SRCS	=	srcs/main.c\
 			srcs/Libft/ft_putnbr.c\
 			srcs/Libft/ft_putstr.c\
 			srcs/Libft/ft_printf.c\
+			srcs/Libft/ft_strlcpy.c\
 			srcs/Libft/ft_putnbr_void.c\
 			srcs/Libft/ft_itoa.c\
 			srcs/Libft/ft_putstr_fd.c\

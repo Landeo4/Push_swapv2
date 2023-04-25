@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 09:45:40 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/24 12:16:36 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/25 14:21:52 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 // faire une fonction pour les guillemet
 // 
 
-char	**ft_guillemet(char **argv)
+
+
+/*
+char	*ft_guillemet(char **argv, int i)
 {
-	int i;
 	int j;
-	char **str;
+	char *str;
 
 	str = NULL;
-	i = 0;
 	j = 0;
 	while (argv[i])
 	{
@@ -31,16 +32,16 @@ char	**ft_guillemet(char **argv)
 			while (argv[i][j] != 22)
 			{
 				if (ft_verif_int(argv[i]) == 1)
-					str[i][j] = argv[i][j];
+					str[j] = argv[i][j];
 				j++;
 			}
 		}
-		i++;
+		break ;
 	}
 	return (str);
 }
 
-int	ft_guillemet_check(char **argv, int i)
+int	ft_guillemet_size(char **argv, int i)
 {
 	int	j;
 	int	tmp;
@@ -56,8 +57,9 @@ int	ft_guillemet_check(char **argv, int i)
 		}
 		i++;
 	}
-	return (1);
+	return (tmp);
 }
+*/
 
 /*
 char	**ft_str_guillemet(char **argv)
