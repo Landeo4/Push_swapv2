@@ -6,15 +6,15 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:47:05 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/26 12:16:47 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:01:26 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_print_lista(t_struct *data)
+int	ft_print_lista(t_struct *data)
 {
-	t_list_a *tmp;
+	t_list_a	*tmp;
 
 	tmp = data->la->next;
 	if (!tmp)
@@ -27,9 +27,9 @@ int ft_print_lista(t_struct *data)
 	return (1);
 }
 
-int ft_print_listb(t_struct *data)
+int	ft_print_listb(t_struct *data)
 {
-	t_list_b *tmp;
+	t_list_b	*tmp;
 
 	tmp = data->lb->next;
 	if (!tmp)

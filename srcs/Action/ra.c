@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 17:12:31 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/24 09:40:23 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:08:32 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	ra(t_struct *data)
 		tmp = tmp->next;
 	}
 	tmp = data->la;
-	ft_freeAta(data, 1);
-	ft_addAta(data, recup, i);
+	ft_freeata(data, 1);
+	ft_addata(data, recup, i);
 	ft_printf("\nra");
 }

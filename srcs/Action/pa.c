@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:34:29 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/24 09:39:24 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:08:24 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	pa(t_struct *data)
 	int	tmp;
 
 	tmp = data->lb->next->num;
-	ft_freeAtb(data, 1);
-	ft_addAta(data, tmp, 1);
+	ft_freeatb(data, 1);
+	ft_addata(data, tmp, 1);
 	ft_printf("\npa");
 }

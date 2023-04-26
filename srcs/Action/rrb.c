@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 13:54:38 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/24 09:40:37 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:08:48 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	rrb(t_struct *data)
 	}
 	recup = tmp->num;
 	tmp = data->lb;
-	ft_freeAtb(data, i);
-	ft_addAtb(data, recup, 1);
+	ft_freeatb(data, i);
+	ft_addatb(data, recup, 1);
 	ft_printf("\nrrb");
 }

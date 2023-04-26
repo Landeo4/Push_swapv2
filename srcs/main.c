@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:14:19 by tpotilli@st       #+#    #+#             */
-/*   Updated: 2023/04/26 12:16:30 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:08:14 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,11 +220,12 @@ int main(int argc, char **argv)
 	ft_init_struct(&data);
 	while (argv[i])
 	{
-		ft_addAta(&data, ft_atoi(argv[i]), 1);
+		ft_addata(&data, ft_atoi(argv[i]), 1);
 		i++;
 	}
 	ft_print_lista(&data);
 	ft_algo_manager(&data, argc - 1);
+	//ft_printf("ypo");
 	ft_print_lista(&data);
 	ft_free_lista(&data);
 	ft_free_listb(&data);

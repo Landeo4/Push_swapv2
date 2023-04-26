@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_addAt.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:20:00 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/04 12:51:12 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/26 18:06:10 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_addAta(t_struct *data, int nb, int pos)
+void	ft_addata(t_struct *data, int nb, int pos)
 {
 	t_list_a	*prec;
 	t_list_a	*cur;
-	int 		i;
+	int			i;
 	t_list_a	*cell;
 
-	cell = ft_createCell_a(nb);
+	cell = ft_createcell_a(nb);
 	prec = data->la;
 	cur = data->la;
 	if (data->la == NULL)
@@ -44,14 +44,14 @@ void	ft_addAta(t_struct *data, int nb, int pos)
 	cell->next = cur;
 }
 
-void	ft_addAtb(t_struct *data, int nb, int pos)
+void	ft_addatb(t_struct *data, int nb, int pos)
 {
 	t_list_b	*prec;
 	t_list_b	*cur;
-	int 		i;
+	int			i;
 	t_list_b	*cell;
 
-	cell = ft_createCell_b(nb);
+	cell = ft_createcell_b(nb);
 	prec = data->lb;
 	cur = data->lb;
 	if (data->lb == NULL)

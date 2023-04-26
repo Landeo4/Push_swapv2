@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:53:32 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/04 12:53:07 by landeo           ###   ########.fr       */
+/*   Updated: 2023/04/26 18:01:45 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_free_lista(t_struct *data)
 {
-	t_list_a *tmp;
+	t_list_a	*tmp;
 
 	tmp = data->la;
 	while (data->la)
@@ -27,7 +27,7 @@ void	ft_free_lista(t_struct *data)
 
 void	ft_free_listb(t_struct *data)
 {
-	t_list_b *tmp;
+	t_list_b	*tmp;
 
 	tmp = data->lb;
 	while (data->lb)

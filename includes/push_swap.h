@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/26 11:07:58 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:08:06 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ typedef struct s_list_a
 typedef struct s_list_b
 {
 	int					num;
-	struct s_list_b	*next;
+	struct s_list_b		*next;
 }	t_list_b;
 
 typedef struct s_struct
@@ -66,30 +66,30 @@ typedef struct s_struct
 //								Function List_A
 // =======================================================================
 
-t_list_a	*ft_createCell_a(int nb);
+t_list_a	*ft_createcell_a(int nb);
 t_list_a	*ft_first_la(t_struct *data);
-void		ft_addAta(t_struct *data, int nb, int pos);
+void		ft_addata(t_struct *data, int nb, int pos);
 int			ft_print_lista(t_struct *data);
 void		ft_free_lista(t_struct *data);
 int			ft_len_lista(t_struct *data);
-int			ft_getAta(t_struct *data, int pos);
-t_list_a	*ft_freeAta(t_struct *data, int pos);
+int			ft_getata(t_struct *data, int pos);
+t_list_a	*ft_freeata(t_struct *data, int pos);
 t_struct	*ft_init_struct(t_struct *data);
 
 // =======================================================================
 //								Function List_B
 // =======================================================================
 
-t_list_b	*ft_createCell_b(int nb);
+t_list_b	*ft_createcell_b(int nb);
 t_list_b	*ft_first_lb(t_struct *data);
-void		ft_addAtb(t_struct *data, int nb, int pos);
+void		ft_addatb(t_struct *data, int nb, int pos);
 int			ft_print_listb(t_struct *data);
 void		ft_free_listb(t_struct *data);
 int			ft_len_listb(t_struct *data);
-int			ft_getAtb(t_struct *data, int pos);
+int			ft_getatb(t_struct *data, int pos);
 void		ft_free_both(t_list_a *la, t_list_b *lb);
 //void		ft_freeAtb(t_struct *data, int pos);
-t_list_b	*ft_freeAtb(t_struct *data, int pos);
+t_list_b	*ft_freeatb(t_struct *data, int pos);
 
 // =======================================================================
 //								Libft
@@ -133,7 +133,6 @@ char		**ft_str_guillemet(char **argv);
 char		**ft_write_str(int i, char **save, int tmp, char **argv);
 char		**ft_cpy_gui(char **argv);
 int			ft_guillemet_size(char **argv, int i);
-int			ft_manager_helper();
 int			ft_gui_check(char **argv);
 int			ft_parsing_manager_sup(char **argv);
 
@@ -179,7 +178,7 @@ void		ft_algo_10_manager(t_struct *data);
 int			ft_found_little(t_struct *data);
 void		ft_10_action(int i, int num, t_list_a *la, t_struct *data);
 int			ft_found_pos_little(t_struct *data);
-void		ft_tri_10(int pos, int num, t_list_a *tmp, t_struct *data);
+void		ft_tri_10(int i, int nb, t_list_a *la, t_struct *data);
 void		push_swap(t_list_a *data);
 void		ft_error(void);
 
