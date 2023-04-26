@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 09:45:40 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/25 17:13:16 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:24:10 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,32 +26,35 @@
 int	ft_gui_check(char **argv)
 {
 	int		i;
-	char	**str;
 	int		j;
 
 	j = 0;
-	str = NULL;
 	i = 1;
-	(void)str;
 	while (argv[i])
 	{
-		while (argv[i][j])
+		if (argv[i][j] == '"')
 		{
-			if (ft_verif_input(argv) == 0)
-				return (0);
-			ft_printf("yo");
-			j++;
+			while (argv[i][j])
+			{
+				if (ft_verif_input(argv) == 0)
+					return (0);
+				ft_printf("yo");
+				j++;
+			}
 		}
 		i++;
 	}
 	return (1);
 }
 
-char	**ft_cpy_gui(char **argv, int i)
+/*
+char	**ft_cpy_gui(char **argv)
 {
 	int		j;
 	char	**str;
+	int		i;
 
+	i = 1;
 	str = NULL;
 	j = 0;
 	if (argv[i] == NULL)
@@ -67,7 +70,7 @@ char	**ft_cpy_gui(char **argv, int i)
 		j = 0;
 	}
 	return (str);
-}
+}*/
 
 /*
 int	ft_gui_check(char **argv)

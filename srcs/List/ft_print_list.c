@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:47:05 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/21 15:52:00 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:16:47 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int ft_print_lista(t_struct *data)
 		return (-1);
 	while (tmp)
 	{
-		printf("%d\n", tmp->num);
+		ft_printf("\n%d", tmp->num);
 		tmp = tmp->next;
 	}
 	return (1);
@@ -36,7 +36,7 @@ int ft_print_listb(t_struct *data)
 		return (-1);
 	while (tmp)
 	{
-		printf("%d\n", tmp->num);
+		ft_printf("\n%d", tmp->num);
 		tmp = tmp->next;
 	}
 	return (1);

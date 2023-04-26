@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:16:43 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/24 08:55:23 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 14:05:56 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ void	ft_10_action(int pos, int num, t_list_a *tmp, t_struct *data)
 	}
 }
 
+// it's use to find the position of little nb
+
 int	ft_found_pos_little(t_struct *data)
 {
 	int			i;
@@ -93,6 +95,8 @@ int	ft_found_pos_little(t_struct *data)
 	}
 	return (i);
 }
+
+// it's use to find the little nb
 
 int	ft_found_little(t_struct *data)
 {

@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:31:04 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/25 17:12:41 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:32:35 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,6 @@ int	ft_parsing_manager_sup(char **argv)
 	return (1);
 }
 
-char	**ft_parsing_manager_trans_arg(char **argv)
-{
-	int i;
-	char **str;
-
-	i = 1;
-	str = NULL;
-	str = ft_cpy_gui(argv, i);
-	return (str);
-}
-
 int ft_parsing_manager(int argc, char **argv)
 {
 	int i;
@@ -42,7 +31,7 @@ int ft_parsing_manager(int argc, char **argv)
 	str = NULL;
 	if (ft_parsing_manager_sup(argv) == 0)
 		return (0);
-	str = ft_parsing_manager_trans_arg(argv);
+	str = ft_strlcpy(argv);
 	while (argv[i])
 	{
 		if (ft_verif_existing(argc) == 0)

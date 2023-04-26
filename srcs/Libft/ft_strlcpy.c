@@ -6,27 +6,34 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:30:32 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/25 13:49:37 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:59:54 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	*ft_strlcpy(char **dest, char *src, size_t size, int i)
+char	**ft_strlcpy(char **src)
 {
 	size_t	j;
+	char	**dest;
+	int	i;
 
+	i = 0;
 	j = 0;
+	dest = NULL;
 	if (!dest || !src)
 		return (0);
-	if (size != 0)
+	ft_printf("%s", src);
+	while (src[i])
 	{
-		while (src[j] && j < (size - 1))
+		while (src[i][j])
 		{
-			dest[i][j] = src[j];
+			dest[i][j] = src[i][j];
 			j++;
 		}
-		dest[i][j] = '\0';
+		i++;
+		j = 0;
 	}
-	return (dest[i]);
+	dest[i][j] = '\0';
+	return (dest);
 }
