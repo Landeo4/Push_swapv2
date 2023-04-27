@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:59:10 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/27 18:00:44 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/27 18:46:05 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,89 @@ int		*ft_get_first_unit(int *tab, t_list_a *la, t_struct *data)
 		len--;
 	}
 	i = 0;
+	tmp = ft_tri_100(tmp, data);
+	len = ft_len_lista(data);
+	while (i < len)
+	{
+		ft_printf("\nle tableau au complet = (%d)%d",tab[i], tmp[i]);
+		i++;
+	}
+	return (tmp);
+}
+
+int		*ft_tri_100(int	*tmp, t_struct *data)
+{
+	int	i;
+	int	a;
+	int	b;
+	int	j;
+	int	size;
+
+	size = ft_len_lista(data);
+	j = 1;
+	i = 0;
+	while (ft_tab_checker(tmp, data) == 0)
+	{
+		while (i < size)
+		{
+			a = tmp[i];
+			b = tmp[j];
+			if (tmp[i] > tmp[j])
+			{
+				tmp[i] = b;
+				tmp[j] = a;
+				ft_printf("yyyy");
+			}
+			i++;
+			j++;
+		}
+		size = ft_len_lista(data);
+		i = 0;
+		j = i + 1;
+	}
+	return (tmp);
+}
+
+
+bool	ft_tab_checker(int *tmp, t_struct *data)
+{
+	int i;
+	int j;
+	int len;
+
+	i = 0;
+	j = 1;
+	len = ft_len_lista(data);
+	while (j < len)
+	{
+		if (tmp[i] > tmp[j])
+			return (0);
+		i++;
+		j++;
+	}
+	return (1);
+}
+
+/*
+int		*ft_get_first_unit(int *tab, t_list_a *la, t_struct *data)
+{
+	int		i;
+	int		*tmp;
+	int		len;
+
+	len = ft_len_lista(data);
+	tmp = ft_100_tab(la, data);
+	i = 0;
+	while (len != 0)
+	{
+		//ft_printf("\navant le modulo = %d", tmp[i]);
+		if (tab[i] >= 10)
+			tmp[i] %= 10;
+		//ft_printf(" ->  %d", tmp[i]);
+		i++;
+		len--;
+	}
+	i = 0;
 	len = ft_len_lista(data);
 	while (ft_tab_checker(tmp, data) != 1)
 	{
@@ -99,26 +182,14 @@ int		*ft_get_first_unit(int *tab, t_list_a *la, t_struct *data)
 bool	ft_tab_checker(int *tmp, t_struct *data)
 {
 	int	i;
-	int	cpt;
 	int	len;
 
 	len = ft_len_lista(data);
-	cpt = 0;
 	i = 0;
-	while (5)
-	{
-		while (tmp[i])
-		{
-			if (tmp[i] < tmp[i + 1])
-			{
-				cpt++;
-				if (cpt == len)
-				return (1);
-			}
-			i++;
-		}
-		break ;
-	}
-	len = ft_len_lista(data);
+	while (tmp[i] < tmp[i + 1])
+		i++;
+	if (i == len)
+		return (1);
 	return (0);
 }
+*/
