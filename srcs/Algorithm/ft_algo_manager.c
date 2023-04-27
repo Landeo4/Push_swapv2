@@ -6,12 +6,12 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:17:46 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/26 15:01:57 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:15:55 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/*
 void	ft_algo_manager(t_struct *data, int len)
 {
 	if (len == 3)
@@ -20,6 +20,8 @@ void	ft_algo_manager(t_struct *data, int len)
 		ft_algo_4_manager(data);
 	if (len > 4 && len <= 10)
 		ft_algo_10_manager(data);
+	if (len > 10 && len < 100)
+		ft_algo_100_manager(data);
 }
 
 void	ft_algo_4_manager(t_struct *data)
@@ -51,7 +53,7 @@ void	ft_algo_10_manager(t_struct *data)
 {
 	ft_algo_10(data);
 }
-
+*/
 /*
 void ft_algo_5_manager(t_struct *data)
 {

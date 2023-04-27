@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:14:19 by tpotilli@st       #+#    #+#             */
-/*   Updated: 2023/04/27 14:15:23 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:25:30 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -238,6 +238,7 @@ int main(int argc, char **argv)
 	int	i;
 	//int pos;
 	//int nb;
+	(void)argc;
 	
 	i = 1;
 	/*if (ft_parsing_manager(argc, argv) == 0)
@@ -250,17 +251,10 @@ int main(int argc, char **argv)
 		i++;
 	}
 	ft_print_lista(&data);
-	ft_algo_manager(&data, argc - 1);
+	//ft_algo_manager(&data, argc - 1);
+	ft_100_tab_manager(&data);
 	//ft_printf("ypo");
-	/*i = 1;
-	pos = ft_found_pos_little(&data);
-	nb = ft_found_little(&data);
-	while (i != 5)
-	{
-		ft_printf("\nnb vaut =  %d\n pos = %d", nb, pos);
-		i++;
-	}*/
-	ft_print_lista(&data);
+	//ft_print_lista(&data);
 	ft_free_lista(&data);
 	ft_free_listb(&data);
 }

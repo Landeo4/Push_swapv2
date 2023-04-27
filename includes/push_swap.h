@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/27 14:24:25 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:27:09 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,8 +156,18 @@ void		rrb(t_struct *data);
 // =======================================================================
 
 void		ft_algo_manager(t_struct *data, int len);
+
+// =======================================================================
+//								algo 3
+// =======================================================================
+
 void		ft_algo_3(t_struct *data);
 void		ft_algo_3sup(t_struct *data, int num1, int num2, int num3);
+
+// =======================================================================
+//								algo 4
+// =======================================================================
+
 void		ft_algo_4(t_struct *data, int token);
 void		ft_algo_4_manager(t_struct *data);
 void		ft_algo_4_1(t_struct *data);
@@ -165,20 +175,27 @@ void		ft_algo_4_2(t_struct *data);
 void		ft_algo_4_3(t_struct *data);
 void		ft_algo_4_3sup(t_struct *data, int nb1, int nb2, int nb3, int nb4);
 void		ft_algo_4_4(t_struct *data);
-void		ft_algo_5(t_struct *data, int token);
-void		ft_algo_5_manager(t_struct *data);
-int			ft_algo_5_manager_sup(int n1, int n2, int n3, int n4, int n5);
-void		ft_algo_5_1(t_struct *data);
-void		ft_algo_5_2(t_struct *data);
-void		ft_algo_5_3(t_struct *data);
-void		ft_algo_5_4(t_struct *data);
-void		ft_algo_5_5(t_struct *data);
+
+// =======================================================================
+//								algo 10
+// =======================================================================
+
 void		ft_algo_10(t_struct *data);
 void		ft_algo_10_manager(t_struct *data);
 int			ft_found_little(t_struct *data);
 void		ft_10_action(t_list_a *la, t_struct *data);
 int			ft_found_pos_little(t_struct *data);
 void		ft_tri_10(t_list_a *la, t_struct *data);
+
+// =======================================================================
+//								algo 100
+// =======================================================================
+
+void		ft_algo_100_manager(t_struct *data);
+int			*ft_100_tab(t_list_a *la, t_struct *data);
+int			*ft_100_tab_manager(t_struct *data);
+int			*ft_get_first_unit(int *tab, t_list_a *la, t_struct *data);
+
 void		push_swap(t_list_a *data);
 void		ft_error(void);
 
