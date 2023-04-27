@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/27 16:27:09 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:05:30 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ int			ft_print_ptr(unsigned long long ptr);
 char		*ft_itoa(int n);
 int			ft_print_hex(unsigned int nbr, const char format);
 char		**ft_strlcpy(char **src);
+int			*ft_swap(int *a, int ind1, int ind2);
 
 // =======================================================================
 //								Parsing 
@@ -195,6 +196,7 @@ void		ft_algo_100_manager(t_struct *data);
 int			*ft_100_tab(t_list_a *la, t_struct *data);
 int			*ft_100_tab_manager(t_struct *data);
 int			*ft_get_first_unit(int *tab, t_list_a *la, t_struct *data);
+bool		ft_tab_checker(int *tmp, t_struct *data);
 
 void		push_swap(t_list_a *data);
 void		ft_error(void);

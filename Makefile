@@ -13,6 +13,7 @@ SRCS	=	srcs/main.c\
 			srcs/Libft/ft_strlcpy.c\
 			srcs/Libft/ft_putnbr_void.c\
 			srcs/Libft/ft_itoa.c\
+			srcs/Libft/ft_swap.c\
 			srcs/Libft/ft_putstr_fd.c\
 			srcs/List/ft_addAt.c\
 			srcs/List/ft_create_cell.c\
