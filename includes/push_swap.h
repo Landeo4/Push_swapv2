@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/27 18:34:31 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/04/30 15:49:30 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,5 +200,6 @@ bool		ft_tab_checker(int *tmp, t_struct *data);
 int			*ft_tri_100(int	*tmp, t_struct *data);
 void		push_swap(t_list_a *data);
 void		ft_error(void);
+int			*ft_essaie(int *tmp, t_struct *data, int *tab);
 
 #endif
