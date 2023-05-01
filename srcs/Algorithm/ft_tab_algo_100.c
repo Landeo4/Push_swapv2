@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:59:10 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/30 23:42:23 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:02:49 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ maintenant il faut faire en sorte que ma liste d'origine
 puisse avoir le meme classement
 */
 
+/*
+la division permet d'avoir les dizaines
+*/
 int	*ft_100_tab_manager(t_struct *data)
 {
 	int			*tab;
@@ -76,18 +79,19 @@ int	*ft_get_first_unit(int *tab, t_list_a *la, t_struct *data)
 	{
 		if (tab[i] >= 10)
 			tmp[i] %= 10;
-		i++;
+		//ft_printf("\nle nouveau modulo est de (%d)%d", tab[i], tmp[i]);
 		len--;
+		i++;
 	}
 	i = 0;
 	tmp = ft_tri_100(tmp, data);
 	len = ft_len_lista(data);
 	while (i < len)
 	{
-		//ft_printf("\nle tableau au complet = (%d)%d",tab[i], tmp[i]);
+		ft_printf("\nle tableau au complet = (%d)%d",tab[i], tmp[i]);
 		i++;
 	}
-	tmp = ft_essaie(tmp, data, tab);
+	//tmp = ft_essaie(tmp, data, tab);
 	return (tmp);
 }
 
@@ -132,7 +136,7 @@ bool	ft_tab_checker(int *tmp, t_struct *data)
 	i = 0;
 	j = 1;
 	len = ft_len_lista(data);
-	while (j < len)
+	while (i < len)
 	{
 		if (tmp[i] > tmp[j])
 			return (0);
