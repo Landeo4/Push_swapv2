@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/05/02 11:07:10 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:15:51 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,7 +202,9 @@ void		push_swap(t_list_a *data);
 void		ft_error(void);
 int			*ft_essaie(int *tmp, t_struct *data, int *tab);
 void		ft_take_25_algo100(t_struct *data);
-int			ft_get_min_100(t_struct *data);
+int			ft_get_min_100(t_struct *data, int min, int max);
+int			ft_get_min_100_25(t_struct *data, int len);
+int			ft_get_min_100_75(t_struct *data, int len);
 int			ft_get_cpt_100(t_struct *data);
 
 #endif
