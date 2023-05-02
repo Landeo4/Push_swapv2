@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:59:10 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/05/01 18:02:49 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/05/02 09:01:47 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ puisse avoir le meme classement
 /*
 la division permet d'avoir les dizaines
 */
+
+/*
 int	*ft_100_tab_manager(t_struct *data)
 {
 	int			*tab;
@@ -119,6 +121,7 @@ int	*ft_tri_100(int	*tmp, t_struct *data)
 			}
 			i++;
 			j++;
+			//ft_printf("\nla valeur est %d et i = %d", tmp[i], i);
 		}
 		size = ft_len_lista(data);
 		i = 0;
@@ -162,6 +165,7 @@ int	*ft_essaie(int *tmp, t_struct *data, int *tab)
 	}
 	return (tmp);
 }
+*/
 
 /*
 int		*ft_get_first_unit(int *tab, t_list_a *la, t_struct *data)
