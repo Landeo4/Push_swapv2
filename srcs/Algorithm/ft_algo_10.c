@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:16:43 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/27 14:55:40 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:17:42 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_algo_10(t_struct *data)
 	i = 0;
 	pos = ft_found_pos_little(data);
 	num = ft_found_little(data);
+	la = data->la->next;
 	while (i < pos)
 	{
 		i++;
@@ -49,50 +50,11 @@ void	ft_tri_10(t_list_a *la, t_struct *data)
 {
 	while (la)
 	{
-		if (ft_len_lista(data) == 3)
-		{
-			ft_algo_3(data);
-			break ;
-		}
 		ft_10_action(la, data);
 		la = data->la->next;
 	}
 	while (ft_len_listb(data))
-		pa(data);
-}
-
-void	ft_10_action(t_list_a *tmp, t_struct *data)
-{
-	int	len;
-	int	pos;
-	int	num;
-
-	pos = ft_found_pos_little(data);
-	num = ft_found_little(data);
-	len = ft_len_lista(data);
-	len = len / 2;
-	if (pos < len)
-	{
-		while (tmp)
-		{
-			if (tmp->num == num)
-				break ;
-			ra(data);
-			tmp = data->la->next;
-		}
-		pb(data);
-	}
-	else
-	{
-		while (tmp)
-		{
-			if (tmp->num == num)
-				break ;
-			rra(data);
-			tmp = data->la->next;
-		}
-		pb(data);
-	}
+		data->lb = pa(data);
 }
 
 int	ft_found_pos_little(t_struct *data)
@@ -121,7 +83,7 @@ int	ft_found_little(t_struct *data)
 	int			nb;
 	t_list_a	*tab;
 
-	i = 1;
+	i = 0;
 	tab = data->la->next;
 	nb = data->la->next->num;
 	while (tab)
@@ -130,8 +92,6 @@ int	ft_found_little(t_struct *data)
 			nb = tab->num;
 		tab = tab->next;
 		i++;
-		if (i > 10)
-			break ;
 	}
 	return (nb);
 }

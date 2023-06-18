@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 18:29:56 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/24 09:41:15 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:57:16 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@
 ** It will do sa and sb at the same time
 */
 
-void	ss(t_struct *data)
+t_struct	*ss(t_struct *data)
 {
 	t_list_a	*a;
 	t_list_b	*b;
 
 	sa(a);
 	sb(b);
-	ft_printf("\nss");
+	ft_printf("ss\n");
+	return (data);
 }

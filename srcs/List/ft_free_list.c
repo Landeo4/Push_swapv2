@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: landeo <landeo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:53:32 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/26 18:01:45 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:53:36 by landeo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_free_lista(t_struct *data)
 		free(data->la);
 		data->la = tmp;
 	}
+	free(data->la);
 }
 
 void	ft_free_listb(t_struct *data)
@@ -36,4 +37,5 @@ void	ft_free_listb(t_struct *data)
 		free(data->lb);
 		data->lb = tmp;
 	}
+	free(data->lb);
 }

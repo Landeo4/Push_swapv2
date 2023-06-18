@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 19:07:26 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/26 18:08:28 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:56:44 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,19 @@
 ** =====================================================
 ** =====================================================
 **
-** take the first element on the top of a and put it in top b
+** take the first element on the top of A and put it in top B
 ** prend le premier element au sommet de a et le met sur b.
 */
 
-void	pb(t_struct *data)
+t_list_a	*pb(t_struct *data)
 {
-	int	tmp;
+	int			tmp;
+	t_list_a	*la;
 
-	tmp = data->la->next->num;
-	ft_freeata(data, 1);
-	ft_addatb(data, tmp, 1);
-	ft_printf("\npb");
+	la = data->la->next;
+	tmp = la->num;
+	data->la = ft_freeata(data, 1);
+	data->lb = ft_addatb(data, tmp, 1);
+	ft_printf("pb\n");
+	return (data->la);
 }

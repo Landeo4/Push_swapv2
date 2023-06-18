@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 19:47:30 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/04/26 18:08:37 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:56:51 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,24 +27,23 @@
 ** Le premier élément devient le dernier.
 */
 
-void	rb(t_struct *data)
+t_list_b	*rb(t_struct *data)
 {
 	int			i;
 	int			recup;
 	t_list_b	*tmp;
 
-	i = 0;
-	tmp = data->lb;
-	recup = data->lb->num;
+	i = 1;
+	tmp = data->lb->next;
+	recup = data->lb->next->num;
 	while (tmp->next)
 	{
-		tmp = tmp->next;
 		i++;
+		tmp = tmp->next;
 	}
-	i++;
 	tmp = data->lb;
-	ft_freeatb(data, 1);
-	ft_addatb(data, recup, i);
-	data->lb = tmp;
-	ft_printf("\nrb");
+	data->lb = ft_freeatb(data, 1);
+	data->lb = ft_addatb(data, recup, i);
+	ft_printf("rb\n");
+	return (data->lb);
 }
