@@ -34,12 +34,15 @@ SRCS	=	srcs/main.c\
 			srcs/Parsing/ft_guillemet.c\
 			srcs/Action/sa.c\
 			srcs/Action/sb.c\
+			srcs/Action/ss.c\
 			srcs/Action/pa.c\
 			srcs/Action/pb.c\
 			srcs/Action/ra.c\
 			srcs/Action/rb.c\
+			srcs/Action/rr.c\
 			srcs/Action/rra.c\
 			srcs/Action/rrb.c\
+			srcs/Action/rrr.c\
 			srcs/Algorithm/ft_algo_manager.c\
 			srcs/Algorithm/ft_algo_3.c\
 			srcs/Algorithm/ft_algo_10.c\
@@ -50,12 +53,8 @@ SRCS	=	srcs/main.c\
 			srcs/Algorithm/ft_algo_100_b.c\
 			srcs/Algorithm/ft_algo_100_b2.c\
 			srcs/Algorithm/ft_algo_100helper.c\
+			srcs/Algorithm/ft_algo_100reduce.c\
 			srcs/Algorithm/ft_algo_500.c\
-			srcs/Algorithm/ft_algo_500helper1.c\
-			srcs/Algorithm/ft_algo_500helper2.c\
-			srcs/Algorithm/ft_algo_500_b.c\
-			srcs/Algorithm/ft_algo_500_b2.c\
-			srcs/Algorithm/ft_algo_500helper.c\
 
 
 OBJS= $(SRCS:.c=.o)

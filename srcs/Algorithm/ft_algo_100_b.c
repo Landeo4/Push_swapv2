@@ -6,19 +6,17 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:29:41 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/06/18 01:42:50 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/06/27 21:14:52 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_found_best_place100(t_struct *data, t_list_b *lb)
+int	ft_found_best_place100(t_struct *data, t_list_b *lb, int nb)
 {
-	int			nb;
 	int			cpt;
 
-	nb = data->la->next->num;
-	cpt = 1;
+	cpt = 0;
 	lb = data->lb->next;
 	while (lb && lb->next)
 	{
@@ -30,22 +28,14 @@ int	ft_found_best_place100(t_struct *data, t_list_b *lb)
 	return (-1);
 }
 
-int	ft_take_best_place100(t_struct *data, int cpt)
+int	ft_take_best_place100(t_struct *data, int cpt, int chunk)
 {
-	int			len;
+	int		len;
+	(void)cpt;
 
 	len = ft_len_listb(data);
 	len = len / 2;
-	if (cpt == len)
-	{
-		while (len > 0)
-		{
-			len--;
-			data->lb = rb(data);
-		}
-		return (0);
-	}
-	ft_best_place_helper(cpt, len, data);
+	ft_trie_100_manager(data, chunk, 1);
 	return (0);
 }
 
@@ -115,12 +105,19 @@ void	ft_best_place_102_helper(int i, int len, t_struct *data)
 			data->lb = rrb(data);
 			return ;
 		}
-		while (i++ < len)
+		i = len - i;
+		while (i > 0)
+		{
 			data->lb = rrb(data);
+			i--;
+		}
 	}
 	else if (i < len)
 	{
-		while (i++ < len)
+		while (i > 0)
+		{
 			data->lb = rb(data);
+			i--;
+		}
 	}
 }
