@@ -6,7 +6,7 @@
 /*   By: tpotilli <tpotilli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 14:47:19 by tpotilli          #+#    #+#             */
-/*   Updated: 2023/06/27 21:16:33 by tpotilli         ###   ########.fr       */
+/*   Updated: 2023/06/28 18:15:17 by tpotilli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,25 +140,25 @@ int			ft_parsing_manager_sup(char **argv);
 //								actions
 // =======================================================================
 
-t_list_a		*sa(t_list_a *la, t_struct *data);
-t_list_b		*sb(t_list_b *lb, t_struct *data);
-t_struct		*ss(t_struct *data);
-t_list_a		*pb(t_struct *data);
-t_list_b		*pa(t_struct *data);
-t_list_a		*ft_change_pos_a(t_list_a *la);
-t_list_a		*ra(t_struct *data);
-t_list_b		*rb(t_struct *data);
-t_list_a		*rra(t_struct *data);
-t_list_b		*rrb(t_struct *data);
-t_struct		*ss(t_struct *data);
-t_list_a		*sa_ss(t_struct *data);
-t_list_b		*sb_ss(t_struct *data);
-t_struct		*rrr(t_struct *data);
-t_list_a		*rra_rr(t_struct *data);
-t_list_b		*rrb_rr(t_struct *data);
-t_struct		*rr(t_struct *data);
-t_list_a		*ra_rr(t_struct *data);
-t_list_b		*rb_rr(t_struct *data);
+t_list_a	*sa(t_list_a *la, t_struct *data);
+t_list_b	*sb(t_list_b *lb, t_struct *data);
+t_struct	*ss(t_struct *data);
+t_list_a	*pb(t_struct *data);
+t_list_b	*pa(t_struct *data);
+t_list_a	*ft_change_pos_a(t_list_a *la);
+t_list_a	*ra(t_struct *data);
+t_list_b	*rb(t_struct *data);
+t_list_a	*rra(t_struct *data);
+t_list_b	*rrb(t_struct *data);
+t_struct	*ss(t_struct *data);
+t_list_a	*sa_ss(t_struct *data);
+t_list_b	*sb_ss(t_struct *data);
+t_struct	*rrr(t_struct *data);
+t_list_a	*rra_rr(t_struct *data);
+t_list_b	*rrb_rr(t_struct *data);
+t_struct	*rr(t_struct *data);
+t_list_a	*ra_rr(t_struct *data);
+t_list_b	*rb_rr(t_struct *data);
 
 // =======================================================================
 //								algo
@@ -195,7 +195,6 @@ int			*ft_100_tab_manager(t_struct *data);
 int			*ft_get_first_unit(int *tab, t_list_a *la, t_struct *data);
 bool		ft_tab_checker(int *tmp, t_struct *data);
 void		push_swap(t_list_a *data);
-void		ft_error(void);
 int			*ft_essaie(int *tmp, t_struct *data, int *tab);
 void		ft_take_25_algo100(t_struct *data, int compare, int little, int chunk);
 int			ft_get_100_25(t_struct *data);
@@ -204,7 +203,7 @@ bool		ft_100_check(t_struct *data, int len);
 void		ft_trie_50_algo_100(t_struct *data, t_list_a *la);
 int			ft_search_min25_100(t_struct *data, t_list_b *lb);
 int			ft_get_min_100_25(t_struct *data, int len);
-int 		ft_somme_algo_100(t_list_a *la, int argc, int token, int len);
+int			ft_somme_algo_100(t_list_a *la, int argc, int token, int len);
 void		ft_tri_25_algo100(t_struct *data);
 bool		ft_verif_25(t_struct *data, int len);
 void		ft_algo_100_helper(t_struct *data);
@@ -222,7 +221,7 @@ int			ft_trie_100_b_little(t_struct *data, int little);
 int			ft_trie_100_b_biggest(t_struct *data, int little);
 int			ft_found_best_place100(t_struct *data, t_list_b *lb, int nb);
 int			ft_take_b_100(t_struct *data, int lit, int token);
-int			ft_take_best_place100(t_struct *data, int cpt, int chunk);
+int			ft_take_best_place100(t_struct *data, int chunk);
 void		ft_sort_b100(t_struct *data, int i);
 void		ft_take_first_second_algo100(t_struct *data, int compare, int little);
 void		ft_100_swap_manager(t_struct *data, int lit1, int lit2, int chunk);
@@ -240,31 +239,44 @@ int			ft_helper100man(int token, int moyennech1, t_struct *data, int argc);
 int			ft_algo100manager_helper2(t_struct *data);
 int			ft_100else(int pos, int nb, t_list_a *tab);
 void		ft_best_place_helper(int cpt, int len, t_struct *data);
-void		ft_best_place_102_helper(int i ,int len, t_struct *data);
+void		ft_best_place_102_helper(int i, int len, t_struct *data);
 void		ft_100_swap_help(t_struct *data, int len, t_list_b *lb);
 void		ft_100_lit1(t_list_b *lb, t_struct *data, int cpt);
 void		ft_bp_alg100help(int len, int i, t_struct *data, int nb);
 int			ft_reduce_managera(t_struct *data, int chunk);
 void		ft_trie_lb_1(int i, int len, t_struct *data, int nb);
 void		ft_trie_lb_1helper(int i, int len, t_struct *data, int nb);
-void		ft_trie_lb_0(int i, int len, t_struct *data, int nb);
-void		ft_trie_lb_0helper(int i, int len, t_struct *data, int nb);
 void		ft_trie_lb_manager(t_struct *data, int nb);
 void		ft_trie_la_1(int i, int len, t_struct *data, int nb);
 void		ft_trie_la_1helper(int i, int len, t_struct *data, int nb);
-void		ft_trie_la_0(int i, int len, t_struct *data, int nb);
-void		ft_trie_la_0helper(int i, int len, t_struct *data, int nb);
 void		ft_trie_100_manager(t_struct *data, int chunk, int token);
-int 		ft_la_manager(int little, t_struct *data);
+int			ft_la_manager(int little, t_struct *data);
 int			best_place_manager(t_struct *data, int little);
 int			ft_best_place_b_mang(t_struct *data, int little);
 int			ft_found_pos_big_lb(t_struct *data);
+void		ft_best_place_102help(int i, int len, t_struct *data);
+void		ft_take_25_help(int compare, t_struct *data, int little, int len);
+void		ft_100_swap_help0(t_struct *data, int lit1, int lit2, int chunk);
+void		ft_make_best_place_alg100_0(t_struct *data, t_list_b *lb);
+void		ft_100_swap_manager_negative(t_struct *data, int lit1, int lit2, int chunk);
+void		ft_100_lit10(t_list_b *lb, t_struct *data, int cpt);
+void		ft_make_best_place_alg100_0(t_struct *data, t_list_b *lb);
+void		ft_bp_alg100help0(int len, int i, t_struct *data, int nb);
+void		ft_take_best_place1022(t_struct *data, int nb);
+void		ft_best_place_1022_helper(int i, int len, t_struct *data);
+void		ft_trie_1000_manager(t_struct *data, int chunk, int token);
+int			ft_found_best_place1000(t_struct *data, t_list_b *lb, int nb);
+void		ft_best_place_1020help(int i, int len, t_struct *data);
+int			ft_found_best_place1000(t_struct *data, t_list_b *lb, int nb);
+int			ft_trie_1000_b_little(t_struct *data, int little);
+int			ft_trie_1000_b_biggest(t_struct *data, int little);
+void		ft_take_25_algo1000(t_struct *data, int compare, int little, int chunk);
 
 // =======================================================================
 //								algo 500
 // =======================================================================
 
-void	ft_algo_500_manager(t_struct *data, int argc);
-int		ft_somme_algo_500(t_list_a *la, int argc, int token, int len);
+void		ft_algo_500_manager(t_struct *data, int argc);
+int			ft_somme_algo_500(t_list_a *la, int argc, int token, int len);
 
 #endif
